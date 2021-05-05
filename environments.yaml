@@ -1,0 +1,9 @@
+preproduction:
+    - name: "preprod"
+    - env-url: "{{ .Env.DEMO_PREPROD_URL }}"
+    - env-token-name: "DEMO_PREPROD_TOKEN"
+
+production:
+    - name: "prod"
+    - env-url: "{{ .Env.DEMO_PROD_URL }}"
+    - env-token-name: "DEMO_PROD_TOKEN"
