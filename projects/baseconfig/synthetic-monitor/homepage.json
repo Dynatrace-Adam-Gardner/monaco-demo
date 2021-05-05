@@ -1,0 +1,49 @@
+{
+  "name": "{{ .name }}",
+  "frequencyMin": {{ .frequency_minutes }},
+  "enabled": true,
+  "type": "HTTP",
+  "script": {
+    "version": "1.0",
+    "requests": [
+      {
+        "description": "Homepage",
+        "url": "{{ .host }}",
+        "method": "GET",
+        "requestBody": "",
+        "validation": {
+          "rules": [{
+              "value": ">=400",
+              "passIfFound": false,
+              "type": "httpStatusesList"
+            }]
+        },
+        "configuration": {
+          "acceptAnyCertificate": true,
+          "followRedirects": true
+        }
+      }
+    ]
+  },
+  "locations": {{ .locations }},
+  "anomalyDetection": {
+    "outageHandling": {
+      "globalOutage": true,
+      "localOutage": false,
+      "localOutagePolicy": {
+        "affectedLocations": 1,
+        "consecutiveRuns": 3
+      }
+    },
+    "loadingTimeThresholds": {
+      "enabled": false,
+      "thresholds": [
+        {
+          "type": "TOTAL",
+          "valueMs": 0
+        }
+      ]
+    }
+  },
+  "manuallyAssignedApps": []
+}

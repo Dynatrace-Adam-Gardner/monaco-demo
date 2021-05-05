@@ -1,0 +1,74 @@
+{
+  "dashboardMetadata": {
+    "name": "{{ .name }}",
+    "shared": {{ .dashboardShared }},
+    "owner": "{{ .owner }}",
+    "dashboardFilter": null
+  },
+  "tiles": [{
+      "name": "Application health",
+      "tileType": "APPLICATIONS",
+      "configured": true,
+      "bounds": {
+		"top": 0,
+		"left": 0,
+        "width": 152,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": null,
+      "chartVisible": true
+    },
+    {
+      "name": "Service health",
+      "tileType": "SERVICES",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 152,
+        "width": 152,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": null,
+      "chartVisible": true
+    },
+    {
+      "name": "Host health",
+      "tileType": "HOSTS",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 304,
+        "width": 152,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": null,
+      "chartVisible": true
+    }, {
+      "name": "Service-level objective",
+      "tileType": "SLO",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 456,
+        "width": 342,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": "-1w",
+        "managementZone": null
+      },
+      "assignedEntities": ["{{ .sloAssignedEntity }}"]
+    }]
+}

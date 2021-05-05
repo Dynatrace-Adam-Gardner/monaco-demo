@@ -1,0 +1,8 @@
+config:
+  - overview_dashboard: "overview_dashboard.json"
+
+overview_dashboard:
+  - name: "Overview Dashboard"
+  - owner: "adam.gardner@dynatrace.com"
+  - dashboardShared: "false"
+  - sloAssignedEntity: "/projects/baseconfig/slo/synth_availability.id"

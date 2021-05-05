@@ -1,0 +1,15 @@
+config:
+  - application: "application.json"
+
+application:
+  - name: "appone"
+  - rumEnabled: "true"
+  - capturePercentage: "100"
+  
+#application.preproduction:
+#  - rumEnabled: "true"
+#  - capturePercentage: "100"
+  
+#application.production:
+#  - rumEnabled: "true"
+#  - capturePercentage: "5"

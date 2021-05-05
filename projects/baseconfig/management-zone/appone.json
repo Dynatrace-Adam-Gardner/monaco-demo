@@ -1,0 +1,65 @@
+{
+  "name": "{{ .name }}",
+  "description": null,
+  "rules": [{
+      "type": "PROCESS_GROUP",
+      "enabled": true,
+      "propagationTypes": [ "PROCESS_GROUP_TO_SERVICE", "PROCESS_GROUP_TO_HOST"],
+      "conditions": [{
+          "key": {
+            "attribute": "HOST_TAGS"
+          },
+          "comparisonInfo": {
+            "type": "TAG",
+            "operator": "EQUALS",
+            "value": {
+              "context": "CONTEXTLESS",
+              "key": "{{ .tag_key }}",
+              "value": "{{ .tag_value }}"
+            },
+            "negate": false
+          }
+        }]
+    },
+    {
+      "type": "WEB_APPLICATION",
+      "enabled": true,
+      "propagationTypes": [],
+      "conditions": [{
+          "key": {
+            "attribute": "WEB_APPLICATION_TAGS"
+          },
+          "comparisonInfo": {
+            "type": "TAG",
+            "operator": "EQUALS",
+            "value": {
+              "context": "CONTEXTLESS",
+              "key": "{{ .tag_key }}",
+              "value": "{{ .tag_value }}"
+            },
+            "negate": false
+          }
+        }]
+    }, {
+      "type": "HTTP_MONITOR",
+      "enabled": true,
+      "propagationTypes": [],
+      "conditions": [{
+          "key": {
+            "attribute": "HTTP_MONITOR_TAGS"
+          },
+          "comparisonInfo": {
+            "type": "TAG",
+            "operator": "EQUALS",
+            "value": {
+              "context": "CONTEXTLESS",
+              "key": "{{ .tag_key }}",
+              "value": "{{ .tag_value }}"
+            },
+            "negate": false
+          }
+        }]
+    }],
+  "dimensionalRules": [],
+  "entitySelectorBasedRules": []
+}

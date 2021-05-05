@@ -1,0 +1,6 @@
+config:
+  - application-tag: "app.json"
+
+application-tag:
+  - name: "app"
+  - value: "appone"

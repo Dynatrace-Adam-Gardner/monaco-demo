@@ -1,0 +1,12 @@
+config:
+  - urlrule: "app.json"
+
+urlrule:
+  - name: "/projects/baseconfig/application-web/application.name"
+  - applicationId: "/projects/baseconfig/application-web/application.id"
+  
+urlrule.preproduction:
+  - pattern: "url-here"
+  
+urlrule.production:
+  - pattern: "url-here"

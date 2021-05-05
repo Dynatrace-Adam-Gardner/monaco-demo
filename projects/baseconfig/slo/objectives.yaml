@@ -1,0 +1,11 @@
+config:
+  - synth_availability: "synthetic_availability.json"
+
+synth_availability:
+  - enabled: "true"
+  - name: "appone availability"
+  - metric: "builtin:synthetic.http.availability.location.total"
+  - target_level: "98"
+  - warning_level: "99"
+  - timeframe: "-1w"
+  - filter: 'mzName(\"appone\"),type(\"HTTP_CHECK\")'

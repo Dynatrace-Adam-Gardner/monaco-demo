@@ -1,0 +1,60 @@
+{
+  "name": "{{ .name }}",
+  "description": null,
+  "rules": [{
+      "type": "PROCESS_GROUP",
+      "enabled": true,
+      "valueFormat": "{HostGroup:Name}",
+      "propagationTypes": [
+        "PROCESS_GROUP_TO_HOST",
+        "PROCESS_GROUP_TO_SERVICE"
+      ],
+      "conditions": [{
+          "key": {
+            "attribute": "HOST_GROUP_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EXISTS",
+            "value": null,
+            "negate": false,
+            "caseSensitive": null
+          }
+        }]
+    }, {
+      "type": "APPLICATION",
+      "enabled": true,
+      "valueFormat": "{{ .value }}",
+      "propagationTypes": [],
+      "conditions": [{
+          "key": {
+            "attribute": "WEB_APPLICATION_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "EQUALS",
+            "value": "{{ .value }}",
+            "negate": false,
+            "caseSensitive": true
+          }
+        }]
+    }, {
+      "type": "HTTP_CHECK",
+      "enabled": true,
+      "valueFormat": "{{ .value }}",
+      "propagationTypes": [],
+      "conditions": [{
+          "key": {
+            "attribute": "HTTP_MONITOR_NAME"
+          },
+          "comparisonInfo": {
+            "type": "STRING",
+            "operator": "CONTAINS",
+            "value": "{{ .value }}",
+            "negate": false,
+            "caseSensitive": false
+          }
+        }]
+    }],
+  "entitySelectorBasedRules": []
+}

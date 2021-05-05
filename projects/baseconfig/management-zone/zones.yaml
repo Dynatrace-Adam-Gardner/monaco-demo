@@ -1,0 +1,7 @@
+config:
+  - appone_zone: "appone.json"
+
+appone_zone:
+  - name: "appone"
+  - tag_key: "app"
+  - tag_value: "appone"
