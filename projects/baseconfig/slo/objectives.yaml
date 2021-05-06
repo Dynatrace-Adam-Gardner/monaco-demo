@@ -9,3 +9,4 @@ synth_availability:
   - warning_level: "99"
   - timeframe: "-1w"
   - filter: "{{ .Env.SLO_FILTER }}"
+  - skipDeployment: "true"
