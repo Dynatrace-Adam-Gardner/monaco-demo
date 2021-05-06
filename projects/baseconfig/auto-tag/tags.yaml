@@ -3,4 +3,4 @@ config:
 
 application-tag:
   - name: "app"
-  - value: "appone"
+  - value: "{{ .Env.AppName }}"
