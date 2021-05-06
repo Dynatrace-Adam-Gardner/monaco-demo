@@ -2,7 +2,7 @@ config:
   - application: "application.json"
 
 application:
-  - name: "appone"
+  - name: "{{ .Env.AppName }}"
   - rumEnabled: "true"
   - capturePercentage: "100"
   
