@@ -1,0 +1,10 @@
+config:
+  - dashboard: "teama.json"
+
+dashboard:
+  - name: "Team A Dashboard"
+  - owner: "adam.gardner@dynatrace.com"
+  - dashboardShared: "false"
+  - onCallLead: "Bob Smith"
+  - incidents: "## Incidents ✔️\n\nNONE"
+#  - incidents: "## Incidents ⚠️\n\n- [[P1] User Logins Failing (ABC-123)](https://dynatrace.com)\n- [[P1] Payments down (DEF-456)](https://dynatrace.com)\n- [[P4] Advisory notice (XYZ-889)](https://dynatrace.com)

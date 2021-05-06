@@ -1,0 +1,41 @@
+{
+  "dashboardMetadata": {
+    "name": "{{ .name }}",
+    "shared": "{{ .dashboardShared }}",
+    "owner": "{{ .owner }}",
+    "dashboardFilter": null
+  },
+  "tiles": [
+    {
+      "name": "{{ .name }}",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "On Call Support Lead: **{{ .onCallLead }}**\n\n- [Support Link](https://dynatrace.com)\n- [Escalation Procedure](https://dynatrace.com)\n\n----------------\n\n{{ .incidents }}"
+    }
+  ]
+}
