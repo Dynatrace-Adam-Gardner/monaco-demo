@@ -35,7 +35,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "{{ .incidents }} \n"
+      "markdown": "blah \n"
     }
   ]
 }
