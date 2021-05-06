@@ -6,7 +6,7 @@ urlrule:
   - applicationId: "/projects/baseconfig/application-web/application.id"
   
 urlrule.preproduction:
-  - pattern: "url-here"
+  - pattern: "{{ .Env.PreprodURL }}"
   
 urlrule.production:
-  - pattern: "url-here"
+  - pattern: "{{ .Env.ProdURL }}"
