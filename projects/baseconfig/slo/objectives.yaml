@@ -8,4 +8,4 @@ synth_availability:
   - target_level: "98"
   - warning_level: "99"
   - timeframe: "-1w"
-  - filter: "mzName({{ .Env.AppName }}),type(HTTP_CHECK)"
+  - filter: "type(HTTP_CHECK),tag(app:{{ .Env.AppName }})"
