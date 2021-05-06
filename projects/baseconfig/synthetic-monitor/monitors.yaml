@@ -2,7 +2,7 @@ config:
   - availability: "homepage.json"
 
 availability:
-  - name: "appone synthetic"
+  - name: "{{ .Env.AppName }} synthetic"
   - frequency_minutes: "5"
 
 availability.preproduction:
