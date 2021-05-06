@@ -3,7 +3,7 @@ config:
 
 availability:
   - name: "{{ .Env.AppName }}"
-  - frequency_minutes: "5"
+  - frequency_minutes: "1"
 
 availability.preproduction:
   - locations: "[\"GEOLOCATION-0A41430434C388A9\"]"
