@@ -3,4 +3,3 @@ config:
 
 application-tag:
   - name: "app"
-  - value: "{{ .Env.AppName }}"
