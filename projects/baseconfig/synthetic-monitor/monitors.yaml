@@ -7,8 +7,8 @@ availability:
 
 availability.preproduction:
   - locations: "[\"GEOLOCATION-0A41430434C388A9\"]"
-  - host: "http://url-here"
+  - host: "{{ .Env.PreprodURL }}"
 
 availability.production:
   - locations: "[\"GEOLOCATION-2FD31C834DE4D601\", \"GEOLOCATION-08B2F38AF2C7BDA6\"]"
-  - host: "http://url-here"
+  - host: "{{ .Env.ProdURL }}"
