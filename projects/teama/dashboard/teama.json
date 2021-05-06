@@ -35,7 +35,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "On Call Support Lead: **{{ .onCallLead }}**\n\n- [Support Link](https://dynatrace.com)\n- [Escalation Procedure](https://dynatrace.com)\n\n----------------\n\n{{ .incidents }}"
+      "markdown": "On Call Support Lead: **{{ .onCallLead }}**\n\n- [Support Link](https://dynatrace.com)\n- [Escalation Procedure](https://dynatrace.com)\n\n----------------\n\n{{ .incidents }}\n"
     }
   ]
 }
