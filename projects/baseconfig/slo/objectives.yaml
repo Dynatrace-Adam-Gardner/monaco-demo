@@ -3,9 +3,9 @@ config:
 
 synth_availability:
   - enabled: "true"
-  - name: "appone availability"
+  - name: "{{ .Env.AppName}} availability"
   - metric: "builtin:synthetic.http.availability.location.total"
   - target_level: "98"
   - warning_level: "99"
   - timeframe: "-1w"
-  - filter: 'mzName(\"appone\"),type(\"HTTP_CHECK\")'
+  - filter: 'mzName(\"{{ .Env.AppName }}\"),type(\"HTTP_CHECK\")'
