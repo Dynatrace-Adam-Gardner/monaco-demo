@@ -9,7 +9,7 @@ dashboard:
   - incidents: "## Incidents ✔️\\n\\nNONE"
   
 dashboard.preproduction:
-  - incidents: "## 1 Open Incident ⚠️\\n\\n- [Go to Open Problems]({{ .Env.DEMO_PREPROD_URL }}/ui/problems?gtf=-2h&gf=all&tags=app:{{ .Env.AppName }}&status=OPEN)"
+#  - incidents: "## 1 Open Incident ⚠️\\n\\n- [Go to Open Problems]({{ .Env.DEMO_PREPROD_URL }}/ui/problems?gtf=-2h&gf=all&tags=app:{{ .Env.AppName }}&status=OPEN)"
   
 dashboard.production:
-  - incidents: "## 1 Open Incident ⚠️\\n\\n- [Go to Open Problems]({{ .Env.DEMO_PROD_URL }}/ui/problems?gtf=-2h&gf=all&tags=app:{{ .Env.AppName }}&status=OPEN)"
+#  - incidents: "## 1 Open Incident ⚠️\\n\\n- [Go to Open Problems]({{ .Env.DEMO_PROD_URL }}/ui/problems?gtf=-2h&gf=all&tags=app:{{ .Env.AppName }}&status=OPEN)"
