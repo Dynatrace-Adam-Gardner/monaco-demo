@@ -8,7 +8,9 @@ availability:
 availability.preproduction:
   - locations: "[\"GEOLOCATION-0A41430434C388A9\"]"
   - host: "{{ .Env.PreprodURL }}"
+  - frequency_minutes: "1"
 
 availability.production:
   - locations: "[\"GEOLOCATION-2FD31C834DE4D601\", \"GEOLOCATION-08B2F38AF2C7BDA6\"]"
   - host: "{{ .Env.ProdURL }}"
+  - frequency_minutes: "1"
